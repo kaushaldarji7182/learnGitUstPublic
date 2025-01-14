@@ -1,0 +1,1079 @@
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=kaushaldarji7182
+user.email=kaushaldarji7182@gmail.com
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ git config --global
+error: no action specified
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ git config --global --list
+user.name=kaushaldarji7182
+user.email=kaushaldarji7182@gmail.com
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ git config user.name
+kaushaldarji7182
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ git log
+fatal: not a git repository (or any of the parent directories): .git
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ cd devops/git/
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git
+$ git log
+fatal: not a git repository (or any of the parent directories): .git
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git
+$ ls
+learnGitUstPublic/
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git
+$ cd learnGitUstPublic/
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log
+commit 647a578653403648f6f4e599b696be1093fba973 (HEAD -> main)
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 12:17:16 2025 +0530
+
+    second commit
+
+commit 03a3b724fadb44e7a6de3e1432a54ec3e77d1093
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 12:11:26 2025 +0530
+
+    second version
+
+commit 6adaec64b32f6e03e66813005a27578520c095f6 (origin/main, origin/HEAD)
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 11:47:04 2025 +0530
+
+    Init Version
+
+commit fe48850036b9269f272a52022721bc864d5371d5
+Author: kaushaldarji <64036351+kaushaldarji7182@users.noreply.github.com>
+Date:   Tue Jan 14 10:08:55 2025 +0530
+
+    Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff fe48850036b9269f272a52022721bc864d5371d5 6adaec64b32f6e03e66813005a27578520c095f6
+diff --git a/data.txt b/data.txt
+new file mode 100644
+index 0000000..f83414e
+--- /dev/null
++++ b/data.txt
+@@ -0,0 +1 @@
++Hello, I am learning Git
+\ No newline at end of file
+diff --git a/newfile.txt b/newfile.txt
+new file mode 100644
+index 0000000..a673f46
+--- /dev/null
++++ b/newfile.txt
+@@ -0,0 +1 @@
++Hello, this is new file and changes are made
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "T1"
+[main c13ba31] T1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "T2"
+[main d8ad91f] T2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "T3"
+[main 3d474c0] T3
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log
+commit 3d474c0d6963718991fdafe1893150e8e90b9586 (HEAD -> main)
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 13:58:07 2025 +0530
+
+    T3
+
+commit d8ad91f32c5c00be99c8a5e5e91f4fffb17a85ea
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 13:57:36 2025 +0530
+
+    T2
+
+commit c13ba31518e8393cd4cac700b790551400b21471
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 13:57:20 2025 +0530
+
+    T1
+
+commit 647a578653403648f6f4e599b696be1093fba973
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 12:17:16 2025 +0530
+
+    second commit
+
+commit 03a3b724fadb44e7a6de3e1432a54ec3e77d1093
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 12:11:26 2025 +0530
+
+    second version
+
+commit 6adaec64b32f6e03e66813005a27578520c095f6 (origin/main, origin/HEAD)
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 11:47:04 2025 +0530
+
+    Init Version
+
+commit fe48850036b9269f272a52022721bc864d5371d5
+Author: kaushaldarji <64036351+kaushaldarji7182@users.noreply.github.com>
+Date:   Tue Jan 14 10:08:55 2025 +0530
+
+    Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log --oneline
+3d474c0 (HEAD -> main) T3
+d8ad91f T2
+c13ba31 T1
+647a578 second commit
+03a3b72 second version
+6adaec6 (origin/main, origin/HEAD) Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff d8ad91f c13ba31
+diff --git a/data.txt b/data.txt
+index e6ff781..c95ed07 100644
+--- a/data.txt
++++ b/data.txt
+@@ -1 +1 @@
+-Hello, I am learning Git today afternoon ar 2 pm
+\ No newline at end of file
++Hello, I am learning Git today afternoon
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "commit changes"
+[main 219a77f] commit changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "staging changes"
+[main 7616b92] staging changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "wd changes"
+[main 5587c84] wd changes
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log
+commit 5587c84de4d54c62d27b2e4406ccb52c29a4db8f (HEAD -> main)
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 14:03:50 2025 +0530
+
+    wd changes
+
+commit 7616b92682d79a9424ea624993d7027dec86e861
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 14:03:23 2025 +0530
+
+    staging changes
+
+commit 219a77f2a914e7b76793199ed2a9e66348717687
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 14:02:56 2025 +0530
+
+    commit changes
+
+commit 3d474c0d6963718991fdafe1893150e8e90b9586
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 13:58:07 2025 +0530
+
+    T3
+
+commit d8ad91f32c5c00be99c8a5e5e91f4fffb17a85ea
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 13:57:36 2025 +0530
+
+    T2
+
+commit c13ba31518e8393cd4cac700b790551400b21471
+Author: kaushaldarji7182 <kaushaldarji7182@gmail.com>
+Date:   Tue Jan 14 13:57:20 2025 +0530
+
+    T1
+
+commit 647a578653403648f6f4e599b696be1093fba973
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log --oneline
+5587c84 (HEAD -> main) wd changes
+7616b92 staging changes
+219a77f commit changes
+3d474c0 T3
+d8ad91f T2
+c13ba31 T1
+647a578 second commit
+03a3b72 second version
+6adaec6 (origin/main, origin/HEAD) Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 8 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff
+diff --git a/data.txt b/data.txt
+index 61b196f..7f07494 100644
+--- a/data.txt
++++ b/data.txt
+@@ -1,2 +1,3 @@
+ Hello, I am learning Git today afternoon at 2 pm and end at 6...change for commit...change for staging ....change for working directory
+-this is a new line
+\ No newline at end of file
++this is a new line
++this is also a new line
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff --cache
+error: invalid option: --cache
+usage: git diff [<options>] [<commit>] [--] [<path>...]
+   or: git diff [<options>] --cached [--merge-base] [<commit>] [--] [<path>...]
+   or: git diff [<options>] [--merge-base] <commit> [<commit>...] <commit> [--] [<path>...]
+   or: git diff [<options>] <commit>...<commit> [--] [<path>...]
+   or: git diff [<options>] <blob> <blob>
+   or: git diff [<options>] --no-index [--] <path> <path>
+
+common diff options:
+  -z            output diff-raw with lines terminated with NUL.
+  -p            output patch format.
+  -u            synonym for -p.
+  --patch-with-raw
+                output both a patch and the diff-raw format.
+  --stat        show diffstat instead of patch.
+  --numstat     show numeric diffstat instead of patch.
+  --patch-with-stat
+                output a patch and prepend its diffstat.
+  --name-only   show only names of changed files.
+  --name-status show names and status of changed files.
+  --full-index  show full object name on index lines.
+  --abbrev=<n>  abbreviate object names in diff-tree header and diff-raw.
+  -R            swap input file pairs.
+  -B            detect complete rewrites.
+  -M            detect renames.
+  -C            detect copies.
+  --find-copies-harder
+                try unchanged files as candidate for copy detection.
+  -l<n>         limit rename attempts up to <n> paths.
+  -O<file>      reorder diffs according to the <file>.
+  -S<string>    find filepair whose only one side contains the string.
+  --pickaxe-all
+                show all files diff when -S is used and hit is found.
+  -a  --text    treat all files as text.
+
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff --cached
+diff --git a/data.txt b/data.txt
+index 18c0f7d..61b196f 100644
+--- a/data.txt
++++ b/data.txt
+@@ -1 +1,2 @@
+-Hello, I am learning Git today afternoon at 2 pm and end at 6...change for commit...change for staging ....change for working directory
+\ No newline at end of file
++Hello, I am learning Git today afternoon at 2 pm and end at 6...change for commit...change for staging ....change for working directory
++this is a new line
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m " new change"
+[main 9f9a54a]  new change
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "commited one "
+[main 06abcff] commited one
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newone.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff --cached
+diff --git a/newone.txt b/newone.txt
+index cd3b7a9..0d703d0 100644
+--- a/newone.txt
++++ b/newone.txt
+@@ -1 +1,2 @@
+-this is a new file this line will be commited
+\ No newline at end of file
++this is a new file this line will be commited
++this will only be staged
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff --staged
+diff --git a/newone.txt b/newone.txt
+index cd3b7a9..0d703d0 100644
+--- a/newone.txt
++++ b/newone.txt
+@@ -1 +1,2 @@
+-this is a new file this line will be commited
+\ No newline at end of file
++this is a new file this line will be commited
++this will only be staged
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff Head
+diff --git a/newone.txt b/newone.txt
+index cd3b7a9..0d703d0 100644
+--- a/newone.txt
++++ b/newone.txt
+@@ -1 +1,2 @@
+-this is a new file this line will be commited
+\ No newline at end of file
++this is a new file this line will be commited
++this will only be staged
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff HEAD
+diff --git a/newone.txt b/newone.txt
+index cd3b7a9..0d703d0 100644
+--- a/newone.txt
++++ b/newone.txt
+@@ -1 +1,2 @@
+-this is a new file this line will be commited
+\ No newline at end of file
++this is a new file this line will be commited
++this will only be staged
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff
+diff --git a/newone.txt b/newone.txt
+index 2a56a0f..ddfd155 100644
+--- a/newone.txt
++++ b/newone.txt
+@@ -1,3 +1,3 @@
+ this is a new file this line will be commited
+ this will only be staged
+-this is newly edited
+\ No newline at end of file
++this is newly edited and
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff --staged
+diff --git a/newone.txt b/newone.txt
+index cd3b7a9..2a56a0f 100644
+--- a/newone.txt
++++ b/newone.txt
+@@ -1 +1,3 @@
+-this is a new file this line will be commited
+\ No newline at end of file
++this is a new file this line will be commited
++this will only be staged
++this is newly edited
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git diff HEAD
+diff --git a/newone.txt b/newone.txt
+index cd3b7a9..ddfd155 100644
+--- a/newone.txt
++++ b/newone.txt
+@@ -1 +1,3 @@
+-this is a new file this line will be commited
+\ No newline at end of file
++this is a new file this line will be commited
++this will only be staged
++this is newly edited and
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git branch
+* main
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git branch feature1
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git branch
+  feature1
+* main
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git checkout
+M       newone.txt
+Your branch is ahead of 'origin/main' by 10 commits.
+  (use "git push" to publish your local commits)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git checkout feature1
+M       newone.txt
+Switched to branch 'feature1'
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature1)
+$ git branch
+* feature1
+  main
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature1)
+$ git checkout -b feature1
+fatal: a branch named 'feature1' already exists
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature1)
+$ git checkout -b feature2
+Switched to a new branch 'feature2'
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature2)
+$ git branch
+  feature1
+* feature2
+  main
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature2)
+$ ls
+README.md  data.txt  newfile.txt  newone.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature2)
+$ cat newone.txt
+this is a new file this line will be commited
+this will only be staged
+this is newly edited and
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature2)
+$ git status
+On branch feature2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   newone.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   newone.txt
+
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature2)
+$ git diff
+diff --git a/newone.txt b/newone.txt
+index 2a56a0f..ddfd155 100644
+--- a/newone.txt
++++ b/newone.txt
+@@ -1,3 +1,3 @@
+ this is a new file this line will be commited
+ this will only be staged
+-this is newly edited
+\ No newline at end of file
++this is newly edited and
+\ No newline at end of file
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature2)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature2)
+$ git commit -m " final committed"
+[feature2 fa51ebd]  final committed
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature2)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature2)
+$ git commit -m "feature commit"
+[feature2 bf398d0] feature commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature2)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 10 commits.
+  (use "git push" to publish your local commits)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git branch
+  feature1
+  feature2
+* main
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log --oneline
+06abcff (HEAD -> main, feature1) commited one
+9f9a54a  new change
+5587c84 wd changes
+7616b92 staging changes
+219a77f commit changes
+3d474c0 T3
+d8ad91f T2
+c13ba31 T1
+647a578 second commit
+03a3b72 second version
+6adaec6 (origin/main, origin/HEAD) Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "baseline"
+On branch main
+Your branch is ahead of 'origin/main' by 10 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ cd ..
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git
+$ rm -rf learnGitUstPublic/
+rm: cannot remove 'learnGitUstPublic/': Device or resource busy
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git
+$ rm -rf learnGitUstPublic/
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git
+$ ls
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git
+$ git clone git@github.com:kaushaldarji7182/learnGitUstPublic.git
+Cloning into 'learnGitUstPublic'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 7 (delta 0), reused 4 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (7/7), done.
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git
+$ ls
+learnGitUstPublic/
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git
+$ cd learnGitUstPublic/
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git branch
+* main
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log --oneline
+6adaec6 (HEAD -> main, origin/main, origin/HEAD) Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "M1"
+[main c23839e] M1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Branch.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "M2"
+[main 7b560f9] M2
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "M3"
+[main 89f9f2b] M3
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log --online
+fatal: unrecognized argument: --online
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log --oneline
+89f9f2b (HEAD -> main) M3
+7b560f9 M2
+c23839e M1
+6adaec6 (origin/main, origin/HEAD) Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature)
+$ git log --oneline
+89f9f2b (HEAD -> feature, main) M3
+7b560f9 M2
+c23839e M1
+6adaec6 (origin/main, origin/HEAD) Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature)
+$ git branch
+* feature
+  main
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature)
+$ git commit -m "F1"
+[feature 5afc03a] F1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature)
+$ git commit -m "F2"
+[feature c4f770b] F2
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature)
+$ git log --oneline
+c4f770b (HEAD -> feature) F2
+5afc03a F1
+89f9f2b (main) M3
+7b560f9 M2
+c23839e M1
+6adaec6 (origin/main, origin/HEAD) Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log --oneline
+89f9f2b (HEAD -> main) M3
+7b560f9 M2
+c23839e M1
+6adaec6 (origin/main, origin/HEAD) Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git merge feature
+Updating 89f9f2b..c4f770b
+Fast-forward
+ Branch.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log --oneline
+c4f770b (HEAD -> main, feature) F2
+5afc03a F1
+89f9f2b M3
+7b560f9 M2
+c23839e M1
+6adaec6 (origin/main, origin/HEAD) Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Merge branch 'feature'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Auto-merging Branch.txt
+Merge made by the 'ort' strategy.
+ Branch.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log --oneline
+094cb5f (HEAD -> main) Merge branch 'feature'
+c474923 (feature) F3
+2c8b363 M4
+c4f770b F2
+5afc03a F1
+89f9f2b M3
+7b560f9 M2
+c23839e M1
+6adaec6 (origin/main, origin/HEAD) Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "M5"
+[main 2da2185] M5
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log --oneline
+2da2185 (HEAD -> main) M5
+094cb5f Merge branch 'feature'
+c474923 (feature) F3
+2c8b363 M4
+c4f770b F2
+5afc03a F1
+89f9f2b M3
+7b560f9 M2
+c23839e M1
+6adaec6 (origin/main, origin/HEAD) Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git checkout feature
+Switched to branch 'feature'
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (feature)
+$ git add .
+
+
+
+
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimd
+iff nvimdiff
+Merging:
+Branch.txt
+
+Normal merge conflict for 'Branch.txt':
+  {local}: modified file
+  {remote}: modified file
+Hit return to start merge resolution tool (vimdiff):
+4 files to edit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main|MERGING)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 9 commits.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   Branch.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Branch.txt.orig
+
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main|MERGING)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main|MERGING)
+$ git commit -m "Manually fixed the conflict and merged"
+[main 2b8a149] Manually fixed the conflict and merged
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ ls
+Branch.txt  Branch.txt.orig  README.md  data.txt  newfile.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ cat Branch.txt
+Branch.txt       Branch.txt.orig
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ cat Branch.txt
+Branch.txt       Branch.txt.orig
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ cat Branch.txt.orig
+This is M1 - modified in main after merge
+This is M2
+This is M3
+<<<<<<< HEAD
+This is F1 - this is a changed done from main branch
+This is F2
+=======
+This is F1 - changes done in feature branch
+This is F2 - Modified in feature branch after merge
+>>>>>>> feature
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ rm -rf Branch.txt.orig
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ ls
+Branch.txt  README.md  data.txt  newfile.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "Manually fixed the conflict and merged"
+[main 94ba525] Manually fixed the conflict and merged
+ 1 file changed, 10 deletions(-)
+ delete mode 100644 Branch.txt.orig
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ history
+    1  git config --list
+    2  git config --global
+    3  git config --global --list
+    4  git config user.name
+    5  git log
+    6  cd devops/git/
+    7  git log
+    8  ls
+    9  cd learnGitUstPublic/
+   10  git log
+   11  git diff fe48850036b9269f272a52022721bc864d5371d5 6adaec64b32f6e03e66813005a27578520c095f6
+   12  git status
+   13  git add .
+   14  git commit -m "T1"
+   15* git add
+   16  git commit -m "T2"
+   17  git add .
+   18  git commit -m "T3"
+   19  git log
+   20  git log --oneline
+   21  git diff d8ad91f c13ba31
+   22  git add .
+   23  git commit -m "commit changes"
+   24  git add .
+   25  git commit -m "staging changes"
+   26  git add .
+   27  git commit -m "wd changes"
+   28  git diff
+   29  git log
+   30  git log --oneline
+   31  git status
+   32  git add .
+   33  git diff
+   34  git diff --cache
+   35  git diff --cached
+   36  git add .
+   37  git commit -m " new change"
+   38  git add .
+   39*
+   40  git diff
+   41  git add .
+   42  git diff
+   43  git diff --cached
+   44  git diff --staged
+   45  git diff Head
+   46  git diff HEAD
+   47* git add
+   48  git diff
+   49  git diff --staged
+   50  git diff HEAD
+   51  git branch
+   52  git branch feature1
+   53  git branch
+   54  git checkout
+   55  git checkout feature1
+   56  git branch
+   57  git checkout -b feature1
+   58  git checkout -b feature2
+   59  git branch
+   60  ls
+   61  cat newone.txt
+   62  git status
+   63  git diff
+   64  git add .
+   65  git commit -m " final committed"
+   66  git add .
+   67  git commit -m "feature commit"
+   68  git checkout main
+   69  git branch
+   70  git log --oneline
+   71  git add .
+   72  git commit -m "baseline"
+   73  cd ..
+   74  rm -rf learnGitUstPublic/
+   75  rm -rf learnGitUstPublic/
+   76  ls
+   77  git clone git@github.com:kaushaldarji7182/learnGitUstPublic.git
+   78  ls
+   79  cd learnGitUstPublic/
+   80  git branch
+   81  git log --oneline
+   82  git status
+   83  git add .
+   84  git commit -m "M1"
+   85  git add .
+   86  git commit -m "M2"
+   87  git add .
+   88  git commit -m "M3"
+   89  git log --online
+   90  git log --oneline
+   91  git checkout -b feature
+   92  git log --oneline
+   93  git branch
+   94  git add .
+   95  git commit -m "F1"
+   96  git add .
+   97  git commit -m "F2"
+   98  git log --oneline
+   99  git checkout main
+  100  git log --oneline
+  101  git merge feature
+  102  git log --oneline
+  103  git add .
+  104  git commit -m "M4"
+  105  git checkout feature
+  106  git add .
+  107  git commit -m "F3"
+  108  git log --oneline
+  109  git checkout main
+  110  git merge feature
+  111  git log --oneline
+  112  git add .
+  113  git commit -m "M5"
+  114  git log --oneline
+  115  git checkout feature
+  116  git add .
+  117  git commit -m "f4"
+  118  git checkout main
+  119  git merge feature
+  120  ls
+  121  cat branch.txt
+  122  git mergetool
+  123  git status
+  124  git add .
+  125  git commit -m "Manually fixed the conflict and merged"
+  126  ls
+  127  cat Branch.txt.orig
+  128  rm -rf Branch.txt.orig
+  129  ls
+  130  git add .
+  131  git commit -m "Manually fixed the conflict and merged"
+  132  history
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 12 commits.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        history.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git add .
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "history file"
+[main e16445e] history file
+ 1 file changed, 132 insertions(+)
+ create mode 100644 history.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git push
+Enumerating objects: 40, done.
+Counting objects: 100% (40/40), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (35/35), done.
+Writing objects: 100% (39/39), 4.83 KiB | 412.00 KiB/s, done.
+Total 39 (delta 10), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (10/10), done.
+To github.com:kaushaldarji7182/learnGitUstPublic.git
+   6adaec6..e16445e  main -> main
