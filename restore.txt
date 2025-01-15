@@ -1,2 +1,3 @@
 Hi everyone..this will be staged
 this will be commited
+this will be staged
