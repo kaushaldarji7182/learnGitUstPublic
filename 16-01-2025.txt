@@ -1,0 +1,207 @@
+learning git
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Wed Jan 15 14:50:45 2025 +0530
+#
+# On branch feature1
+# Your branch is up to date with 'origin/feature1'.
+#
+# Changes to be committed:
+#       new file:   testUst/hello.txt
+#
+# Untracked files:
+#       .bash_history
+#       .cache/
+#       .docker/
+#       .eclipse/
+#       .erlang.cookie
+#       .gitconfig
+#       .lesshst
+learning git
+
+
+
+[feature1 ed0ae37] learning git
+ Date: Wed Jan 15 14:50:45 2025 +0530
+ 1 file changed, 1 insertion(+)
+ create mode 100644 testUst/hello.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~ (feature1)
+$ ls
+'3D Objects'/        'Local Settings'@                                                                               Postman/            devops/
+ AppData/             Music/                                                                                         PrintHood@          eclipse/
+'Application Data'@  'My Documents'@                                                                                 Recent@             eclipse-workspace/
+ Contacts/            NTUSER.DAT                                                                                    'Saved Games'/       newIgnore/
+ Cookies@             NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf                                        Searches/           ntuser.dat.LOG1
+ Desktop/             NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms   SendTo@             ntuser.dat.LOG2
+ Documents/           NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms  'Start Menu'@        ntuser.ini
+ Downloads/           NetHood@                                                                                       Templates@          testUst/
+ Favorites/           OneDrive/                                                                                      Videos/             testUst.txt
+ Links/               Pictures/                                                                                     'WPS Cloud Files'/
+
+Administrator@0ab0b042538a58a MINGW64 ~ (feature1)
+$ cd devosp
+bash: cd: devosp: No such file or directory
+
+Administrator@0ab0b042538a58a MINGW64 ~ (feature1)
+$ cd devops
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops (feature1)
+$ cd git/learnGitUstPublic/
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ ls
+ 15-01-25.txt   Branch.txt   README.md   data.txt  'full data.txt'   history.txt   newfile.txt   restore.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ echo "new commit changed" >> newfile.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git commit -m "new commit applied"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   newfile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git log --oneline
+dd86e2b (HEAD -> main, origin/main, origin/HEAD) new file added
+263f45a v5
+1474a75 v2
+5600edb v1
+a84404a full history file
+e16445e history file
+94ba525 Manually fixed the conflict and merged
+2b8a149 Manually fixed the conflict and merged
+6fee09e (feature) f4
+2da2185 M5
+094cb5f Merge branch 'feature'
+c474923 F3
+2c8b363 M4
+c4f770b F2
+5afc03a F1
+89f9f2b M3
+7b560f9 M2
+c23839e M1
+6adaec6 Init Version
+fe48850 Initial commit
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git branch
+  feature
+* main
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git checkout -b kaushal
+Switched to a new branch 'kaushal'
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (kaushal)
+$ git checkout main
+M       newfile.txt
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git branch
+  feature
+  kaushal
+* main
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git checkout kaushal
+M       newfile.txt
+Switched to branch 'kaushal'
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (kaushal)
+$ echo "Kaushal Delete file" >> kaushal.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (kaushal)
+$ git add .
+warning: in the working copy of 'newfile.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'kaushal.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (kaushal)
+$ git commit -m "new file added"
+[kaushal 112ac30] new file added
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 kaushal.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (kaushal)
+$ git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (kaushal)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (main)
+$ git merge kaushal
+Updating dd86e2b..112ac30
+Fast-forward
+This is new amend commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[kaushal d9200e9] This is new amend commit Please enter the commit message for your changes. Lines starting
+ Date: Thu Jan 16 10:50:43 2025 +0530
+ 1 file changed, 2 insertions(+)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (kaushal)
+$ GIT LOG
+git: 'LOG' is not a git command. See 'git --help'.
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (kaushal)
+$ git log --oneline
+d9200e9 (HEAD -> kaushal) This is new amend commit Please enter the commit message for your changes. Lines starting
+112ac30 (main) new file added
+dd86e2b (origin/main, origin/HEAD) new file added
+263f45a v5
+1474a75 v2
+5600edb v1
+a84404a full history file
+e16445e history file
+94ba525 Manually fixed the conflict and merged
+2b8a149 Manually fixed the conflict and merged
+6fee09e (feature) f4
+2da2185 M5
+094cb5f Merge branch 'feature'
+c474923 F3
+2c8b363 M4
+c4f770b F2
+5afc03a F1
+89f9f2b M3
+7b560f9 M2
+c23839e M1
+6adaec6 Init Version
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/learnGitUstPublic (kaushal)

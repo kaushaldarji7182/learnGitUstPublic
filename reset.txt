@@ -1,0 +1,372 @@
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ echo "this if file " >>file1.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ git add .
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ git commit -m "f1"
+[master 13482ce] f1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ echo "this if file edited " >>file1.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ git add .
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it
+Revert "f3"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[master b21ce97] Revert "f3"
+ 1 file changed, 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ git log --oneline
+b21ce97 (HEAD -> master) Revert "f3"
+94e7b42 f3
+48f0b8d f2
+13482ce f1
+de415ac file 1 edited seocnd ime
+c0a88ab file 1 edited
+120c177 file 1 edited
+f59701a file 1 added
+45ceeea file 1 added
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ cat file1.txt
+this if file
+this if file edited
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+Revert "f3"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[master 064a38a] Revert "f3"
+ 1 file changed, 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ git log --oneline
+064a38a (HEAD -> master) Revert "f3"
+a2896cc f3
+b21ce97 Revert "f3"
+94e7b42 f3
+48f0b8d f2
+13482ce f1
+de415ac file 1 edited seocnd ime
+c0a88ab file 1 edited
+120c177 file 1 edited
+f59701a file 1 added
+45ceeea file 1 added
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ cat file1.txt
+this if file
+this if file edited
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ ^C
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ cd ..
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ mk dir resetcmd
+bash: mk: command not found
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ mkdir resetcmd
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ cd resetcmd/
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd
+$ echo "this is line one " >> resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd
+$ git add .
+fatal: not a git repository (or any of the parent directories): .git
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd
+$ git init
+Initialized empty Git repository in C:/Users/Administrator/resetcmd/.git/
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ echo "this is line one " >> resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ ls
+resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ cat resetcmd.txt
+this is line one
+this is line one
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ rm resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ echo "this is line one " >> resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git add .
+warning: in the working copy of 'resetcmd.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git commit -m "m1"
+[master (root-commit) f808b53] m1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ echo "this is second line " >> resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git add .
+warning: in the working copy of 'resetcmd.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git commit -m "m2"
+[master 55440b4] m2
+ 1 file changed, 1 insertion(+)
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ echo "this is third line " >> resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git commit -m "m3"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   resetcmd.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git log --oneline
+55440b4 (HEAD -> master) m2
+f808b53 m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ fir add .
+bash: fir: command not found
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git add .
+warning: in the working copy of 'resetcmd.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git commit -m "m3"
+[master 8653770] m3
+ 1 file changed, 1 insertion(+)
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git log --oneline
+8653770 (HEAD -> master) m3
+55440b4 m2
+f808b53 m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --soft HEAD~1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git log --oneline
+55440b4 (HEAD -> master) m2
+f808b53 m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ echo "this is third line " >> resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git add .
+warning: in the working copy of 'resetcmd.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git commit -m "m3"
+[master ef7fb26] m3
+ 1 file changed, 2 insertions(+)
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --mixed HEAD~1
+Unstaged changes after reset:
+M       resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git log --oneline
+55440b4 (HEAD -> master) m2
+f808b53 m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   resetcmd.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --hard HEAD~2
+fatal: ambiguous argument 'HEAD~2': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git log --oneline
+55440b4 (HEAD -> master) m2
+f808b53 m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ echo "this is third line " >> resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git add .
+warning: in the working copy of 'resetcmd.txt', LF will be replaced by CRLF the next time Git touches it
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git commit -m "m3
+> ^C
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git commit -m "m3'
+> ^C
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git commit -m "m3"
+[master 78fcfb0] m3
+ 1 file changed, 3 insertions(+)
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git log --oneline
+78fcfb0 (HEAD -> master) m3
+55440b4 m2
+f808b53 m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --hard HEAD~2
+HEAD is now at f808b53 m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git log --oneline
+f808b53 (HEAD -> master) m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ echo "this is second line " >> resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git commit -m "m2"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   resetcmd.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git add .
+warning: in the working copy of 'resetcmd.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git log --oneline
+f808b53 (HEAD -> master) m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git commit -m "m2"
+[master e33b3bb] m2
+ 1 file changed, 1 insertion(+)
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git log --oneline
+e33b3bb (HEAD -> master) m2
+f808b53 m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ echo "this third line " >> resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git add .
+warning: in the working copy of 'resetcmd.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git commit -m "m3"
+[master 54dbde1] m3
+ 1 file changed, 1 insertion(+)
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git log --oneline
+54dbde1 (HEAD -> master) m3
+e33b3bb m2
+f808b53 m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --hard HEAD~e33b3bb
+fatal: ambiguous argument 'HEAD~e33b3bb': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --hard e33b3bb
+.git/         resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --hard e33b3bb
+.git/         resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --hard e33b3bb
+.git/         resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --hard e33b3bb
+.git/         resetcmd.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --hard e33b3bb resetcmd.txt
+fatal: Cannot do hard reset with paths.
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --hard resetcmd.txt
+HEAD        ORIG_HEAD   master
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ git reset --hard resetcmd.txt
+HEAD        ORIG_HEAD   master
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)

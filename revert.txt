@@ -1,0 +1,101 @@
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ echo "this if file " >>file1.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ git add .
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ git commit -m "f1"
+[master 13482ce] f1
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ echo "this if file edited " >>file1.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ git add .
+warning: in the working copy of 'file1.txt', LF will be replaced by CRLF the next time Git touches it
+Revert "f3"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[master b21ce97] Revert "f3"
+ 1 file changed, 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ git log --oneline
+b21ce97 (HEAD -> master) Revert "f3"
+94e7b42 f3
+48f0b8d f2
+13482ce f1
+de415ac file 1 edited seocnd ime
+c0a88ab file 1 edited
+120c177 file 1 edited
+f59701a file 1 added
+45ceeea file 1 added
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ cat file1.txt
+this if file
+this if file edited
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+Revert "f3"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[master 064a38a] Revert "f3"
+ 1 file changed, 1 deletion(-)
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ git log --oneline
+064a38a (HEAD -> master) Revert "f3"
+a2896cc f3
+b21ce97 Revert "f3"
+94e7b42 f3
+48f0b8d f2
+13482ce f1
+de415ac file 1 edited seocnd ime
+c0a88ab file 1 edited
+120c177 file 1 edited
+f59701a file 1 added
+45ceeea file 1 added
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)
+$ cat file1.txt
+this if file
+this if file edited
+
+Administrator@0ab0b042538a58a MINGW64 ~/testGit (master)

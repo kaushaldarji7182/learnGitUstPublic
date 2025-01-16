@@ -1,0 +1,104 @@
+
+Administrator@0ab0b042538a58a MINGW64 ~/resetcmd (master)
+$ cd ..
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ git clone git@github.com:kaushaldarji7182/learnGitUstPublic.git
+Cloning into 'learnGitUstPublic'...
+remote: Enumerating objects: 65, done.
+remote: Counting objects: 100% (65/65), done.
+remote: Compressing objects: 100% (39/39), done.
+remote: Total 65 (delta 18), reused 56 (delta 15), pack-reused 0 (from 0)
+Receiving objects: 100% (65/65), 13.94 KiB | 407.00 KiB/s, done.
+Resolving deltas: 100% (18/18), done.
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ git pull
+fatal: not a git repository (or any of the parent directories): .git
+
+Administrator@0ab0b042538a58a MINGW64 ~
+$ cd devops
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops
+$ git clone git@github.com:kaushaldarji7182/learnGitUstPublic.git
+Cloning into 'learnGitUstPublic'...
+remote: Enumerating objects: 65, done.
+remote: Counting objects: 100% (65/65), done.
+remote: Compressing objects: 100% (39/39), done.
+remote: Total 65 (delta 18), reused 56 (delta 15), pack-reused 0 (from 0)
+Receiving objects: 100% (65/65), 13.94 KiB | 751.00 KiB/s, done.
+Resolving deltas: 100% (18/18), done.
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops
+$ cd devops
+bash: cd: devops: No such file or directory
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops
+$ git clone git@github.com:kaushaldarji7182/learnGitUstPublic.git
+fatal: destination path 'learnGitUstPublic' already exists and is not an empty directory.
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops
+$ git pull
+fatal: not a git repository (or any of the parent directories): .git
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops
+$ cd learnGitUstPublic/
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (main)
+$ git clone git@github.com:kaushaldarji7182/learnGitUstPublic.git
+Cloning into 'learnGitUstPublic'...
+remote: Enumerating objects: 65, done.
+remote: Counting objects: 100% (65/65), done.
+remote: Compressing objects: 100% (39/39), done.
+remote: Total 65 (delta 18), reused 56 (delta 15), pack-reused 0 (from 0)
+Receiving objects: 100% (65/65), 13.94 KiB | 475.00 KiB/s, done.
+Resolving deltas: 100% (18/18), done.
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (main)
+$ git pull
+Already up to date.
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (main)
+$ git branch
+* main
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (main)
+$ git checkout --track origin/b1
+branch 'b1' set up to track 'origin/b1'.
+Switched to a new branch 'b1'
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (b1)
+$ git branch
+* b1
+  main
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (b1)
+$ ls
+ 15-01-25.txt   README.md    data.txt         history.txt          newfile.txt
+ Branch.txt     branchfile  'full data.txt'   learnGitUstPublic/   restore.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (b1)
+$ git push origin --delete b1
+To github.com:kaushaldarji7182/learnGitUstPublic.git
+ - [deleted]         b1
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (b1)
+$ git branch -d b1
+error: cannot delete branch 'b1' used by worktree at 'C:/Users/Administrator/devops/learnGitUstPublic'
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (b1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (main)
+$ git branch -d b1
+error: the branch 'b1' is not fully merged
+hint: If you are sure you want to delete it, run 'git branch -D b1'
+hint: Disable this message with "git config advice.forceDeleteBranch false"
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (main)
+$ git branch -D b1
+Deleted branch b1 (was 47965f8).
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/learnGitUstPublic (main)

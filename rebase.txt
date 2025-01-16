@@ -1,0 +1,525 @@
+Administrator@0ab0b042538a58a MINGW64 ~/rebase
+$ cd ..
+
+Administrator@0ab0b042538a58a MINGW64 ~ (feature1|REBASE 2/3)
+$ cd ..
+
+Administrator@0ab0b042538a58a MINGW64 /c/Users
+$ cd Administrator/
+
+Administrator@0ab0b042538a58a MINGW64 ~ (feature1|REBASE 2/3)
+$ cd
+Display all 50 possibilities? (y or n)
+.bash_history
+.cache/
+.docker/
+.eclipse/
+.erlang.cookie
+.git/
+.gitconfig
+.lesshst
+.p2/
+.ssh/
+.viminfo
+3D Objects/
+AppData/
+Application Data/
+Contacts/
+Cookies/
+Desktop/
+Documents/
+Downloads/
+Favorites/
+Links/
+Local Settings/
+Music/
+My Documents/
+NTUSER.DAT
+NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TM.blf
+NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000001.regtrans-ms
+NTUSER.DAT{53b39e88-18c4-11ea-a811-000d3aa4692b}.TMContainer00000000000000000002.regtrans-ms
+NetHood/
+OneDrive/
+Pictures/
+Postman/
+PrintHood/
+Recent/
+Saved Games/
+Searches/
+--More--     ^C
+
+Administrator@0ab0b042538a58a MINGW64 ~ (feature1|REBASE 2/3)
+$ cd devops
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops (feature1|REBASE 2/3)
+$ cd git/
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git (feature1|REBASE 2/3)
+$ mkdir Rebase
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git (feature1|REBASE 2/3)
+$ cd rebase
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature1|REBASE 2/3)
+$ git init
+Initialized empty Git repository in C:/Users/Administrator/devops/git/Rebase/.git/
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ echot "this is m1" >> file.txt
+bash: echot: command not found
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ echo "this is m1" >> file.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ git add .
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ git commit "m1"
+error: pathspec 'm1' did not match any file(s) known to git
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ git commit -m "m1"
+[master (root-commit) d8a5668] m1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ echo "this is m2" >> file.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ git add .
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ git commit -m "m2"
+[master 5cc9929] m2
+ 1 file changed, 1 insertion(+)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ echo "this is m3" >> file.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ git add .
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ git commit -m "m3"
+[master a29741f] m3
+ 1 file changed, 1 insertion(+)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ git checkout -b feature
+Switched to a new branch 'feature'
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature)
+$ echo "this is f1" >> feature.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature)
+$ git add .
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature)
+$ git commit -m "f1"
+[feature 472f692] f1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature)
+$ echo "this is f2" >> feature.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature)
+$ git commit -m "f2"
+On branch feature
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   feature.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature)
+$ git add .
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF the next time Git touches it
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature)
+$ git commit -m "f2"
+[feature 02e3901] f2
+ 1 file changed, 1 insertion(+)
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature)
+$ git checkout -b newfeature
+Switched to a new branch 'newfeature'
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (newfeature)
+$ git checkout master
+Switched to branch 'master'
+
+Merge branch 'newfeature'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Merge made by the 'ort' strategy.
+ feature.txt | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 feature.txt
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ git log --oneline
+64a9042 (HEAD -> master) Merge branch 'newfeature'
+50a35f2 m4
+02e3901 (newfeature) f2
+472f692 f1
+a29741f m3
+5cc9929 m2
+d8a5668 m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (master)
+$ git checkout feature
+Switched to branch 'feature'
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature)
+$ git log --oneline
+46f6111 (HEAD -> feature) f2
+3c29fae f1
+50a35f2 m4
+a29741f m3
+5cc9929 m2
+d8a5668 m1
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature)
+$ history
+    1  git config --list
+    2  git config --global
+    3  git config --global --list
+    4  git config user.name
+    5  git log
+    6  cd devops/git/
+    7  git log
+    8  ls
+    9  cd learnGitUstPublic/
+   10  git log
+   11  git diff fe48850036b9269f272a52022721bc864d5371d5 6adaec64b32f6e03e66813005a27578520c095f6
+   12  git status
+   13  git add .
+   14  git commit -m "T1"
+   15  git add
+   16  git commit -m "T2"
+   17  git add .
+   18  git commit -m "T3"
+   19  git log
+   20  git log --oneline
+   21  git diff d8ad91f c13ba31
+   22  git add .
+   23  git commit -m "commit changes"
+   24  git add .
+   25  git commit -m "staging changes"
+   26  git add .
+   27  git commit -m "wd changes"
+   28  git diff
+   29  git log
+   30  git log --oneline
+   31  git status
+   32  git add .
+   33  git diff
+   34  git diff --cache
+   35  git diff --cached
+   36  git add .
+   37  git commit -m " new change"
+   38  git add .
+   39  git diff
+   40  git add .
+   41  git diff
+   42  git diff --cached
+   43  git diff --staged
+   44  git diff Head
+   45  git diff HEAD
+   46  git add
+   47  git diff
+   48  git diff --staged
+   49  git diff HEAD
+   50  git branch
+   51  git branch feature1
+   52  git branch
+   53  git checkout
+   54  git checkout feature1
+   55  git branch
+   56  git checkout -b feature1
+   57  git checkout -b feature2
+   58  git branch
+   59  ls
+   60  cat newone.txt
+   61  git status
+   62  git diff
+   63  git add .
+   64  git commit -m " final committed"
+   65  git add .
+   66  git commit -m "feature commit"
+   67  git checkout main
+   68  git branch
+   69  git log --oneline
+   70  git add .
+   71  git commit -m "baseline"
+   72  cd ..
+   73  rm -rf learnGitUstPublic/
+   74  rm -rf learnGitUstPublic/
+   75  ls
+   76  git clone git@github.com:kaushaldarji7182/learnGitUstPublic.git
+   77  ls
+   78  cd learnGitUstPublic/
+   79  git branch
+   80  git log --oneline
+   81  git status
+   82  git add .
+   83  git commit -m "M1"
+   84  git add .
+   85  git commit -m "M2"
+   86  git add .
+   87  git commit -m "M3"
+   88  git log --online
+   89  git log --oneline
+   90  git checkout -b feature
+   91  git log --oneline
+   92  git branch
+   93  git add .
+   94  git commit -m "F1"
+   95  git add .
+   96  git commit -m "F2"
+   97  git log --oneline
+   98  git checkout main
+   99  git log --oneline
+  100  git merge feature
+  101  git log --oneline
+  102  git add .
+  103  git commit -m "M4"
+  104  git checkout feature
+  105  git add .
+  106  git commit -m "F3"
+  107  git log --oneline
+  108  git checkout main
+  109  git merge feature
+  110  git log --oneline
+  111  git add .
+  112  git commit -m "M5"
+  113  git log --oneline
+  114  git checkout feature
+  115  git add .
+  116  git commit -m "f4"
+  117  git checkout main
+  118  git merge feature
+  119  ls
+  120  cat branch.txt
+  121  git mergetool
+  122  git status
+  123  git add .
+  124  git commit -m "Manually fixed the conflict and merged"
+  125  ls
+  126  cat Branch.txt.orig
+  127  rm -rf Branch.txt.orig
+  128  ls
+  129  git add .
+  130  git commit -m "Manually fixed the conflict and merged"
+  131  history
+  132  git status
+  133  git add .
+  134  git commit -m "history file"
+  135  git push
+  136  git status
+  137  git add .
+  138  git commit -m "full history file"
+  139  git push
+  140  cd devops/git
+  141  ls
+  142  cd learnGitUstPublic/
+  143  git status
+  144  git add .
+  145  git commit -m "v1"
+  146  code restore.txt
+  147  mkdir testUst
+  148  cd testUst
+  149  git init
+  150  echo "Hello Kaushal" >> testUst.txt
+  151  cat testUst.txt
+  152  git remote add origin https://github.com/kaushaldarji7182/testUst.git
+  153  git push -u origin master
+  154  git add .
+  155  git commit -m "v1"
+  156  git remote add origin https://github.com/kaushaldarji7182/testUst.git
+  157  git push -u origin master
+  158  cat testUst.txt
+  159  rc -rd testUst.txt
+  160  rc -rf testUst.txt
+  161  rc -rm testUst.txt
+  162  git rm testUst.txt
+  163  ls
+  164  clear
+  165  echo "Hello Kaushal" >> testUst.txt
+  166  git inti
+  167  git init
+  168  git commmit "v1
+  169  git commmit "v1"
+  170  git commmit -m "v1"
+  171  git rm testUst.txt
+  172  clear
+  173  ls
+  174  git rm testUst.txt
+  175  clear
+  176  cd
+  177  git rm testUst
+  178  cd testUst
+  179  ls
+  180  git rm testUst.txt
+  181  rm -rf testUst.txt
+  182  echo "Hello Kaushal" >> testUst.txt
+  183  ls
+  184  cat testUst.txt
+  185  git init
+  186  git add .
+  187  git commit -m "v1"
+  188  git branch
+  189  git remote add origin git@github.com:kaushaldarji7182/testUst.git
+  190  git push -u origin master
+  191  clear
+  192  mkdir testUst
+  193  echo "Hello Kaushal" >> testUst.txt
+  194  ls
+  195  mkdir testUst
+  196  echo "Hello Kaushal" >> testUst.txt
+  197  git init
+  198  git add .
+  199  cd testUst
+  200  git add .
+  201  git commit -m "v1"
+  202  git add .
+  203  git commit -m "v1"
+  204  ls
+  205  echo "Hello Kaushal" >> testUst.txt
+  206  git add .
+  207  git commit -m "v1"
+  208  git remote add origin git@github.com:kaushaldarji7182/testUst.git
+  209  git push -u origin master
+  210  clear
+  211  git checkout -b feature1
+  212  git branch
+  213  echo "learnig pull request">>hello.txt
+  214  cat hello.txt
+  215  git add .
+  216  git commit -m "learning git"
+  217  git push -u origin feature1
+  218  cd .
+  219  cd ..
+  220  cd C:\Users\Administrator\devops\git\learnGitUstPublic
+  221  cd
+  222  cd ..
+  223  cd Administrator/devops/git/learnGitUstPublic/
+  224  git status
+  225  git add .
+  226  git commit -m "new file added"
+  227  git push
+  228  git config --global
+  229  git config --global --list
+  230  cd
+  231  cd ..
+  232  cd Administrator/
+  233  clear
+  234  cd ..
+  235  cd Administrator/
+  236  mkdir rebase
+  237  cd rebase/
+  238  echo "m1" >>file.txt
+  239  git add .
+  240  git commit -m "this is m1"
+  241  echo "m2" >>file.txt
+  242  git add .
+  243  git commit -m "this is m2"
+  244  echo "m3" >>file.txt
+  245  rem -rf file.txt
+  246  rm -rf file.txt
+  247  git branch
+  248  git checkout master
+  249  echo "m1" >>file.txt
+  250  git add .
+  251  git commit -m "m1"
+  252  echot "m2">>file.txt
+  253  echo "m2">>file.txt
+  254  git add .
+  255  git commit -m "m2"
+  256  echo "m3" >>file.txt
+  257  git add .
+  258  git commit -m "m3"
+  259  git checkout feature1
+  260  echo "f1" >> file.txt
+  261  git add .
+  262  git commit -m "f1"
+  263  echo "f2">>file.txt
+  264  git add .
+  265  git commit "f2"
+  266  git commit -m "f2"
+  267  git checkout -b newfeature
+  268  git checkout feature
+  269  git checkout feature1
+  270  git rebase master
+  271  git status
+  272  git log
+  273  pwd
+  274  git status
+  275  clear
+  276  cd ..
+  277  cd ..
+  278  cd Administrator/
+  279  cd devops
+  280  cd git/
+  281  mkdir Rebase
+  282  cd rebase
+  283  git init
+  284  echot "this is m1" >> file.txt
+  285  echo "this is m1" >> file.txt
+  286  git add .
+  287  git commit "m1"
+  288  git commit -m "m1"
+  289  echo "this is m2" >> file.txt
+  290  git add .
+  291  git commit -m "m2"
+  292  echo "this is m3" >> file.txt
+  293  git add .
+  294  git commit -m "m3"
+  295  git checkout -b feature
+  296  echo "this is f1" >> feature.txt
+  297  git add .
+  298  git commit -m "f1"
+  299  echo "this is f2" >> feature.txt
+  300  git commit -m "f2"
+  301  git add .
+  302  git commit -m "f2"
+  303  git checkout -b newfeature
+  304  git checkout master
+  305  echo "this is m4" >> file.txt
+  306  git add .
+  307  git commit -m "m4"
+  308  git checkout feature
+  309  git rebase master
+  310  git log --oneline
+  311  git checkout master
+  312  git merge newfeature
+  313  git log --oneline
+  314  git checkout feature
+  315  git log --oneline
+  316  history
+
+Administrator@0ab0b042538a58a MINGW64 ~/devops/git/rebase (feature)
+$
