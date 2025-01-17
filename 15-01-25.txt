@@ -3,10 +3,6 @@ Administrator@0ab0b042538a58a MINGW64 ~ (feature1)
 $ mkdir newIgnore
 
 Administrator@0ab0b042538a58a MINGW64 ~ (feature1)
-$ cd ne
-NetHood/   newIgnore/
-
-Administrator@0ab0b042538a58a MINGW64 ~ (feature1)
 $ cd newIgnore/
 
 Administrator@0ab0b042538a58a MINGW64 ~/newIgnore (feature1)
@@ -50,11 +46,6 @@ abc.class
 Administrator@0ab0b042538a58a MINGW64 ~/newIgnore (master)
 $ ls -a
 ./  ../  .git/  .gitignore  abc.class
-
-Administrator@0ab0b042538a58a MINGW64 ~/newIgnore (master)
-$ cp abc.classxyz.class
-cp: missing destination file operand after 'abc.classxyz.class'
-Try 'cp --help' for more information.
 
 Administrator@0ab0b042538a58a MINGW64 ~/newIgnore (master)
 $ cp abc.class xyz.class
